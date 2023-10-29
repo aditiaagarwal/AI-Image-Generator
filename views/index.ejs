@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Image Generator</title>
+
+  <style>
+    html{
+      background-color: #1F1717;
+    }
+    #heading{
+    background-color: #CE5A67;
+    color: #FCF5ED;
+    margin: 0px 0px 0px 0px;
+    border-width: 0px 0px;
+    padding: 15px 40px;
+    height: auto;
+    text-align: center;
+    font-size: 40px;
+    }
+    body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    } 
+    #Description{
+    background-color: #F4BF96;
+    border: none;
+    color: #1F1717;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 20px;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    }
+    #submit{
+    background-color: #CE5A67;
+    border: none;
+    color: #FCF5ED;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 22px;
+    border-radius: 20px;
+    max-width: 150px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    }
+    #output{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+      height:650px;
+      width: 650px;
+      border: 10px solid #F4BF96;
+      border-radius: 20px;
+      margin: auto;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    footer{
+      background-color: #CE5A67;
+      color: #FCF5ED;
+      text-align: center;
+      font-size: 22px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="snow"></div>
+  <h1 id="heading">AI Image Generator</h1>
+  <form action="/submit" method="POST">
+    <input type="text" id="Description" placeholder="Enter your description" name="inputData">
+    <input type="submit" value="Generate" id="submit">
+  </form>
+
+  
+  <% if (link) { %>
+    <img src="<%= link %>" alt="Image Description" id ="output">    
+  <% } %>
+
+  <footer>
+    <p>Author: Aditi Agarwal | <a href="https://github.com/aditiaagarwal">aditiaagarwal</a></p>
+  </footer>
+  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="index.js" charset="retf-8"></script>
+</body>
+</html>
